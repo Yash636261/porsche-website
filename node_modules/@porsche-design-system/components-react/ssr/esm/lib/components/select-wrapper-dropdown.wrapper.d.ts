@@ -1,0 +1,30 @@
+import { type HTMLAttributes } from 'react';
+import type { SelectWrapperDropdownDirection, SelectWrapperState, Theme } from '../types';
+export type PSelectWrapperDropdownProps = Omit<HTMLAttributes<{}>, 'color'> & {
+    description?: string;
+    direction?: SelectWrapperDropdownDirection;
+    disabled?: boolean;
+    filter?: boolean;
+    isOpenOverride?: boolean;
+    label?: string;
+    message?: string;
+    onOpenChange: (isOpen: boolean) => void;
+    required?: boolean;
+    selectRef?: HTMLSelectElement;
+    state?: SelectWrapperState;
+    theme?: Theme;
+};
+export declare const PSelectWrapperDropdown: import("react").ForwardRefExoticComponent<Omit<HTMLAttributes<{}>, "color"> & {
+    description?: string;
+    direction?: SelectWrapperDropdownDirection;
+    disabled?: boolean;
+    filter?: boolean;
+    isOpenOverride?: boolean;
+    label?: string;
+    message?: string;
+    onOpenChange: (isOpen: boolean) => void;
+    required?: boolean;
+    selectRef?: HTMLSelectElement;
+    state?: SelectWrapperState;
+    theme?: Theme;
+} & import("react").RefAttributes<HTMLElement>>;

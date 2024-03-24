@@ -1,0 +1,24 @@
+import { jsxs, Fragment, jsx } from 'react/jsx-runtime';
+import { splitChildren } from '../../splitChildren.mjs';
+import { Component } from 'react';
+import { minifyCss } from '../../minifyCss.mjs';
+import { stripFocusAndHoverStyles } from '../../stripFocusAndHoverStyles.mjs';
+import { getTextareaWrapperCss as getComponentCss$3 } from '../../../../../../components/dist/styles/esm/styles-entry.mjs';
+import { StateMessage } from './state-message.mjs';
+import { Label } from './label.mjs';
+
+class DSRTextareaWrapper extends Component {
+    host;
+    textarea;
+    counterElement;
+    ariaElement;
+    hasCounter;
+    render() {
+        const { children, namedSlotChildren, otherChildren } = splitChildren(this.props.children);
+        const { disabled } = typeof otherChildren[0] === 'object' && 'props' in otherChildren[0] && otherChildren[0]?.props || {};
+        const style = minifyCss(stripFocusAndHoverStyles(getComponentCss$3(disabled, this.props.hideLabel, this.props.state, this.props.hasCounter, this.props.theme)));
+        return (jsxs(Fragment, { children: [jsxs("template", { shadowroot: "open", shadowrootmode: "open", children: [jsx("style", { dangerouslySetInnerHTML: { __html: style } }), jsxs("div", { className: "root", children: [jsx(Label, { hasLabel: this.props.label || namedSlotChildren.filter(({ props: { slot } }) => slot === 'label').length > 0, hasDescription: this.props.description || namedSlotChildren.filter(({ props: { slot } }) => slot === 'description').length > 0, host: null, label: this.props.label, description: this.props.description, isDisabled: disabled, formElement: typeof otherChildren[0] === 'object' && 'props' in otherChildren[0] && otherChildren[0]?.props }), jsxs("div", { className: "wrapper", children: [jsx("slot", {}), this.props.hasCounter && jsx("span", { className: "counter", "aria-hidden": "true" }), this.props.hasCounter && jsx("span", { className: "sr-only", "aria-live": "polite" })] }), jsx(StateMessage, { hasMessage: (this.props.message || namedSlotChildren.filter(({ props: { slot } }) => slot === 'message').length > 0) && ['success', 'error'].includes(this.props.state), state: this.props.state, message: this.props.message, theme: this.props.theme, host: null })] })] }), this.props.children] }));
+    }
+}
+
+export { DSRTextareaWrapper };
