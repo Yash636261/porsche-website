@@ -1,6 +1,6 @@
-import logo from "../../public/assets/images/logo.svg";
-import menu from "../../public/assets/images/menu.svg";
-import porsche from "../../public/assets/images/porsche.webp";
+import logo from "../assets/images/logo.svg";
+import menu from "../assets/images/menu.svg";
+import porsche from "../assets/images/porsche.webp";
 
 const Navbar = () => {
   return (

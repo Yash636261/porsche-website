@@ -1,5 +1,4 @@
-import React from 'react';
-import Heroimg from "../../public/assets/images/Heroimg.png";
+import Heroimg from "../assets/images/Heroimg.png";
 import { PModelSignature } from "@porsche-design-system/components-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
