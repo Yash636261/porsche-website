@@ -7,14 +7,7 @@ const Coursel = () => {
   const [current, setCurrent] = useState(0);
   const totalSlides = Highlightslides.length;
   const containerRef = useRef(null);
-
-  // Get the width of the container element
-  // useEffect(() => {
-  //   const containerWidth = containerRef.current.offsetWidth;
-  //   gsap.set("#slider", { x: -current * containerWidth, ease: "power2.inOut" }); // Set initial position
-  // }, [current]);
-
-  // Animation triggered when current changes
+  
   useGSAP(() => {
     const containerWidth = containerRef.current.offsetWidth;
     gsap.to("#slider", {
@@ -86,25 +79,25 @@ const Coursel = () => {
                 onClick={() => setCurrent(0)}
                 className={` ${
                   current === 0 ? " bg-gray-100" : " bg-white"
-                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border`}
+                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border border-black`}
               ></div>
               <div
                 onClick={() => setCurrent(1)}
                 className={` ${
                   current === 1 ? " bg-gray-100" : " bg-white"
-                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border`}
+                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border border-black`}
               ></div>
               <div
                 onClick={() => setCurrent(2)}
                 className={` ${
                   current === 2 ? " bg-gray-100" : " bg-white"
-                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border`}
+                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border border-black`}
               ></div>
               <div
                 onClick={() => setCurrent(3)}
                 className={` ${
                   current === 3 ? " bg-gray-100" : " bg-white"
-                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border`}
+                } w-3 h-3 md:w-4 md:h-4  rounded-full mx-1 border border-black`}
               ></div>
             </div>
             <button
