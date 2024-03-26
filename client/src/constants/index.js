@@ -11,7 +11,7 @@ export const Highlightslides = [
         imageURL: Taycan,
         description:{
             tagline: "Overfeel",
-                title: "Taycan",
+                title: "taycan",
             }
     },
     {
@@ -29,7 +29,7 @@ export const Highlightslides = [
         imageURL: Panamera,
         description:{
             tagline: "Choose Boldly",
-                title: "Panamera",
+                title: "panamera",
             }
     },
     {
@@ -38,7 +38,7 @@ export const Highlightslides = [
         imageURL: Macan,
         description: {
             tagline: "Dare forward",
-                title: "Macan",
+                title: "macan",
             }
     }
 ]
