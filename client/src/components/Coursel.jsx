@@ -18,20 +18,20 @@ const Coursel = () => {
     });
   }, [current]);
 
-  const goToNextSlide = () => {
-    if (current < totalSlides - 1) {
-      setCurrent((prevSlide) => (prevSlide + 1) % totalSlides);
-    }
-  };
+  // const goToNextSlide = () => {
+  //   if (current < totalSlides - 1) {
+  //     setCurrent((prevSlide) => (prevSlide + 1) % totalSlides);
+  //   }
+  // };
 
-  const goToPrevSlide = () => {
-    if (current > 0) {
-      setCurrent((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
-    }
-  };
+  // const goToPrevSlide = () => {
+  //   if (current > 0) {
+  //     setCurrent((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
+  //   }
+  // };
   return (
     <>
-      <div className="py-10">
+      <div className="pt-10">
         <div className="flex items-center text-white">
           {Highlightslides.map((slide, index) => (
             <div
