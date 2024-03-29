@@ -1,5 +1,6 @@
 import Hero from "./components/Hero"
 import Highlights from "./components/Highlights"
+import Model from "./components/Model"
 import ModelsChooser from "./components/ModelsChooser"
 import Navbar from "./components/Navbar"
 
@@ -11,6 +12,7 @@ const App =()=> {
       <Hero />
       <Highlights />
       <ModelsChooser />
+      <Model />
     </main>
   )
 }

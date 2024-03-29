@@ -9,17 +9,17 @@ const Navbar = () => {
       {/* Added relative positioning */}
       <nav className="flex w-full screen-max-width items-center">
         <div className="flex items-center">
-          <img src={menu} className="h-6" />
+          <img src={menu} className="h-6" alt="menu" />
           <span className="text-black ml-1">Menu</span>
         </div>
         <div className="absolute inset-y-0 left-0 right-0 flex justify-center items-center">
           {" "}
           {/* Absolute positioning to center from full width */}
           <div className="w-full max-sm:hidden">
-            <img src={logo} className="h-3.5 mx-auto" />
+            <img src={logo} className="h-3.5 mx-auto" alt='navbar logo' />
           </div>
           <div className="w-full sm:hidden">
-            <img src={porsche} className="h-10 mx-auto" />
+            <img src={porsche} className="h-10 mx-auto" alt='logo' />
           </div>
         </div>
       </nav>

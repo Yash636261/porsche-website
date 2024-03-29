@@ -17,7 +17,7 @@ const Hero = () => {
         <button className="btn font-semibold">Build Your Own</button>
       </div>
       <div className="w-full h-full md:px-10 lg:px-40 object-contain flex justify-center items-center">
-        <img src={Heroimg} className='w-full h-auto max-h-2/3' alt="Hero" />
+        <img src={Heroimg} className='w-full h-auto max-h-2/3' alt="Hero Image" />
       </div>
     </section>
   )

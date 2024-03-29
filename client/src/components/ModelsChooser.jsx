@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useGSAP } from "@gsap/react";
-// import {Highlightslides} from "../constants/index.js";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import model from "../assets/images/Heroimg.png";
 import taycan from "../assets/images/taycanbg.png";
 import panamera from "../assets/images/panamerabg.png";
 
 const ModelsChooser = () => {
-  const [models, setModels] = useState("taycan");
+  const [models, setModels] = useState("911");
   const [Img, setImg] = useState(model);
 
   // Animation logic
@@ -38,34 +36,42 @@ const ModelsChooser = () => {
     >
       <div className="flex max-md:flex-col-reverse justify-between items-center py-10">
         <div className="flex-grow px-5">
-        <div className="max-md:flex justify-between items-center">
-          
-          <div className="py-4">
-            <h1 id="heading" className="section-title">
-              CONFIGURATOR
-            </h1>
-            <p id="text" className="section-text">
-              CREATE YOUR
-            </p>
-            <p id="text" className="section-text">
-              {models.toUpperCase()}
-            </p>
+          <div className="max-md:flex justify-between items-center">
+            <div className="py-4">
+              <h1 id="heading" className="section-title">
+                CONFIGURATOR
+              </h1>
+              <p id="text" className="section-text">
+                CREATE YOUR
+              </p>
+              <p id="text" className="section-text">
+                {models.toUpperCase()}
+              </p>
+            </div>
+            <button
+              id="text"
+              className="text-cneter max-md:mx-5 border border-gray-200 hover:border-black transition duration-400 h-min py-3 px-5 my-5 flex justify-center items-center rounded-full translate-x-20 opacity-0 font-bold text-2xl"
+            >
+              &gt;
+            </button>
           </div>
-          <button id="text" className="max-md:mx-5 border border-gray-200 hover:border-black transition duration-400 h-min py-3 px-5 my-5 flex justify-center items-center rounded-full translate-x-20 opacity-0 font-bold text-2xl">
-            &gt;
-          </button>
-        </div>
           <div className="flex gap-2 capitalize py-4">
             <button
               className={`px-5 py-2 max-md:text-sm border-b transition duration-700  ${
                 models === "taycan" ? " border-black" : " border-transparent"
               }  `}
-              onClick={() =>{ setModels("taycan"); setImg(taycan)}}
+              onClick={() => {
+                setModels("taycan");
+                setImg(taycan);
+              }}
             >
               Taycan
             </button>
             <button
-              onClick={() =>{ setModels("911"); setImg(model)}}
+              onClick={() => {
+                setModels("911");
+                setImg(model);
+              }}
               className={`px-5 py-2 max-md:text-sm border-b transition duration-700   ${
                 models === "911" ? " border-black" : " border-transparent"
               }  `}
@@ -73,7 +79,10 @@ const ModelsChooser = () => {
               911
             </button>
             <button
-              onClick={() => {setModels("panamera"); setImg(panamera)}}
+              onClick={() => {
+                setModels("panamera");
+                setImg(panamera);
+              }}
               className={`px-5 py-2 max-md:text-sm border-b transition duration-700   ${
                 models === "panamera" ? " border-black" : " border-transparent"
               }  `}
@@ -87,7 +96,7 @@ const ModelsChooser = () => {
             id="image"
             src={Img}
             className="opacity-0 max-w-full md:max-w-2xl"
-            alt=""
+            alt="ModelImage"
           />
         </div>
       </div>
