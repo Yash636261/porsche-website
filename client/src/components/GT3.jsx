@@ -7,10 +7,14 @@ Title: (FREE) Porsche 911 Carrera 4S
 */
 
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, useTexture } from '@react-three/drei'
 
 function Model(props) {
   const { nodes, materials } = useGLTF('models/911.glb')
+
+  materials.window.color.set('#000000');
+  // materials.t.color.set('#9e5453');
+
   return (
     <group {...props} dispose={null}>
       <group position={[-0.015, -0.009, 0.063]} rotation={[-Math.PI / 2, 0, 0]} scale={0.578}>
@@ -260,7 +264,7 @@ function Model(props) {
           geometry={nodes.boot007_0.geometry}
           material={materials.logo}
         />
-        <mesh
+        {/* <mesh
           castShadow
           receiveShadow
           geometry={nodes.Plane005_0.geometry}
@@ -277,7 +281,7 @@ function Model(props) {
           position={[0, -3.75, -0.432]}
           rotation={[0.082, 0, Math.PI]}
           scale={[0.395, 0.395, 0.357]}
-        />
+        /> */}
         <mesh
           castShadow
           receiveShadow

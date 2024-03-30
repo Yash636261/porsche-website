@@ -16,7 +16,7 @@ const Lights = () => {
            */}
           <Lightformer
             form="rect"
-            intensity={10}
+            intensity={50}
             position={[-1, 0, -10]}
             scale={10}
             color={"#495057"}
@@ -30,7 +30,7 @@ const Lights = () => {
           />
           <Lightformer
             form="rect"
-            intensity={10}
+            intensity={10 }
             position={[10, 0, 1]}
             scale={10}
             rotation-y={Math.PI / 2}
@@ -48,7 +48,7 @@ const Lights = () => {
         angle={0.15}
         penumbra={1} // the penumbra is the soft edge of a shadow cast by a point light
         decay={0} // the amount the light dims as it moves away from the source
-        intensity={Math.PI * 0.2} // the light intensity
+        intensity={Math.PI * 0.1} // the light intensity
         color={"#f8f9fa"}
       />
       <spotLight
@@ -56,7 +56,7 @@ const Lights = () => {
         angle={0.15}
         penumbra={1}
         decay={0}
-        intensity={Math.PI * 0.2}
+        intensity={Math.PI * 0.1}
         color={"#f8f9fa"}
       />
       <spotLight
@@ -64,7 +64,7 @@ const Lights = () => {
         angle={0.15}
         penumbra={1}
         decay={0.1}
-        intensity={Math.PI * 3}
+        intensity={Math.PI * 1}
       />
     </group>
   );
