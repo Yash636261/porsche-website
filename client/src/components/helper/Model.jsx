@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import ModelView from "./ModelView";
+import ModelView from "../ModelView";
 import { useRef, useState, useEffect } from "react";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
