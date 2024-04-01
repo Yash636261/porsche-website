@@ -13,6 +13,7 @@ function Model(props) {
   const { nodes, materials } = useGLTF('models/911.glb')
 
   materials.window.color.set('#000000');
+  // materials.hide.color.set('#000000');
   // materials.t.color.set('#9e5453');
 
   return (
@@ -136,6 +137,14 @@ function Model(props) {
           material={materials.Material}
           position={[0, 0, -1.054]}
           scale={[6.953, 9.785, 7.496]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane_0.geometry}
+          material={materials.hide}
+          position={[-1.65, -0.050, -1.052]}
+          scale={[.58 , 1.685, 1.296]}
         />
         <mesh
           castShadow

@@ -3,6 +3,9 @@ import gsap from "gsap";
 import model from "../assets/images/Heroimg.png";
 import taycan from "../assets/images/taycanbg.png";
 import panamera from "../assets/images/panamerabg.png";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ModelsChooser = () => {
   const [models, setModels] = useState("911");
@@ -12,10 +15,10 @@ const ModelsChooser = () => {
   const animateModels = () => {
     gsap.set("#heading", { opacity: 0, y: -20 }); // Reset heading styles
     gsap.set("#text", { opacity: 0, x: -20 }); // Reset text styles
-    gsap.set("#image", { opacity: 0 }); // Reset image styles
+    gsap.set("#image", { opacity: 0, x: -10 }); // Reset image styles
 
     gsap.to("#heading", { opacity: 1, y: 0, delay: 0, ease: "power1.inOut" });
-    gsap.to("#image", { opacity: 1, delay: 0.1, ease: "power1.inOut" });
+    gsap.to("#image", { opacity: 1, x:0, delay: 0.5 , ease: "power1.inOut" });
     gsap.to("#text", {
       opacity: 1,
       x: 0,
@@ -95,7 +98,7 @@ const ModelsChooser = () => {
           <img
             id="image"
             src={Img}
-            className="opacity-0 max-w-full md:max-w-2xl"
+            className="opacity-0 max-w-full md:max-w-2xl -translate-x-20"
             alt="ModelImage"
           />
         </div>
