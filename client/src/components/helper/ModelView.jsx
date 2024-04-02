@@ -1,9 +1,9 @@
 import { Suspense, useEffect,useState } from "react";
 import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
-import Loader from "./helper/Loader";
+import Loader from "./Loader";
 import { AmbientLight, Group } from "three";
-import Lights from "./helper/Lights";
-import GT3 from "./helper/GT3";
+import Lights from "./Lights";
+import GT3 from "./GT3";
 import * as THREE from "three";
 
 const ModelView = ({
@@ -54,8 +54,8 @@ const ModelView = ({
         <Suspense fallback={
               <Loader />
           }>
-          {isWide && <GT3 scale={[1, 1, 1]} />}
-          {!isWide && <GT3 scale={[0.5, 0.5, 0.5]} />}
+          {isWide && <GT3 scale={[0.9, 0.9, 0.9]} color="#0000ff" />}
+          {!isWide && <GT3 scale={[0.5, 0.5, 0.5]} color="#0000ff" />}
         </Suspense>
       </group>
     </View>

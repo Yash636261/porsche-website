@@ -37,6 +37,9 @@ const ModelsChooser = () => {
       id="ModelsChooser"
       className="w-screen overflow-hidden common-padding bg-white text-black lg:px-28"
     >
+              {/* <h1 id="heading" className="section-heading pb-5">
+                CONFIGURATOR
+              </h1> */}
       <div className="flex max-md:flex-col-reverse justify-between items-center py-10">
         <div className="flex-grow px-5">
           <div className="max-md:flex justify-between items-center">
