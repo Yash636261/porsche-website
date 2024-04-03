@@ -16,10 +16,10 @@ const Navbar = () => {
           {" "}
           {/* Absolute positioning to center from full width */}
           <div className="w-full max-sm:hidden">
-            <img src={logo} className="h-3.5 mx-auto" alt='navbar logo' />
+            <img src={logo} className="h-3.5 mx-auto" alt="navbar logo" />
           </div>
           <div className="w-full sm:hidden">
-            <img src={porsche} className="h-10 mx-auto" alt='logo' />
+            <img src={porsche} className="h-10 mx-auto" alt="logo" />
           </div>
         </div>
       </nav>

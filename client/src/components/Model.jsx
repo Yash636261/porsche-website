@@ -81,8 +81,11 @@ const Model = () => {
                 </Canvas>
               </>
             ) : (
-                <img src={img} alt="model-image" className=" object-cover overflow-hidden my-auto" />
-              
+              <img
+                src={img}
+                alt="model-image"
+                className=" object-cover overflow-hidden my-auto"
+              />
             )}
           </div>
         </div>

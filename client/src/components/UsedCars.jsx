@@ -61,12 +61,12 @@ const UsedCars = () => {
                 Making it easy to find your dream Porsche. Enter your location
                 and browse the best car offers available near you.
               </p>
- 
-            <input
-              type="text"
-              placeholder="Enter City or ZIP Code"
-              className="my-10  max-md:my-5 w-full xl:w-1/2 h-12 px-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent"
-            />
+
+              <input
+                type="text"
+                placeholder="Enter City or ZIP Code"
+                className="my-10  max-md:my-5 w-full xl:w-1/2 h-12 px-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent"
+              />
             </div>
           </div>
         </div>

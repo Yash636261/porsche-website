@@ -60,7 +60,7 @@ const Coursel = () => {
                   : "relative sm:pr-20 pr-10"
               }`}
             >
-              <div className="video-carousel_container ">
+              <div className="carousel_container ">
                 <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                   <img
                     src={slide.imageURL} // Update image source property name

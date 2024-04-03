@@ -16,7 +16,7 @@ const ModelsChooser = () => {
     gsap.set("#heading", { opacity: 0, y: -20 }); // Reset heading styles
     gsap.set("#text", { opacity: 0, x: -20 }); // Reset text styles
     gsap.set("#image", { opacity: 0, x: -10 }); // Reset image styles
-  
+
     gsap.to("#heading", {
       opacity: 1,
       y: 0,

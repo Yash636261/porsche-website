@@ -1,4 +1,4 @@
-import { Suspense, useEffect,useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
 import Loader from "./Loader";
 import { AmbientLight, Group } from "three";
@@ -51,9 +51,7 @@ const ModelView = ({
       />
 
       <group ref={groupRef} name={`model`} position={[0, 0, 0]}>
-        <Suspense fallback={
-              <Loader />
-          }>
+        <Suspense fallback={<Loader />}>
           {isWide && <GT3 scale={[0.9, 0.9, 0.9]} color="#0000ff" />}
           {!isWide && <GT3 scale={[0.9, 0.9, 0.9]} color="#0000ff" />}
         </Suspense>

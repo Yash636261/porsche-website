@@ -30,7 +30,7 @@ const Lights = () => {
           />
           <Lightformer
             form="rect"
-            intensity={10 }
+            intensity={10}
             position={[10, 0, 1]}
             scale={10}
             rotation-y={Math.PI / 2}

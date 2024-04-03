@@ -5,9 +5,10 @@ const Footer = () => {
     <div className="bg-gray-800 text-white sm:py-20 py-10 sm:px-10 px-5">
       <div className="container mx-auto px-6 py-4">
         <div className="lg:flex">
-          
           <div className="w-full lg:w-1/4 mt-6 lg:mt-0">
-            <h3 className="text-white lg:text-2xl md:text-xl text-lg font-normal mb-4">Select Your Country/region:</h3>
+            <h3 className="text-white lg:text-2xl md:text-xl text-lg font-normal mb-4">
+              Select Your Country/region:
+            </h3>
             <form className="mt-2 flex max-md:flex-col ">
               <input
                 type="email"

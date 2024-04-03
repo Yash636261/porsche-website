@@ -6,21 +6,25 @@ Source: https://sketchfab.com/3d-models/free-porsche-911-carrera-4s-d01b25448379
 Title: (FREE) Porsche 911 Carrera 4S
 */
 
-import React, { useRef } from 'react'
-import { useGLTF, useTexture } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF, useTexture } from "@react-three/drei";
 
 function Model(props) {
   const { color } = props;
-  const { nodes, materials } = useGLTF('models/911.glb')
+  const { nodes, materials } = useGLTF("models/911.glb");
 
-  materials.window.color.set('#000000');
+  materials.window.color.set("#000000");
   materials.paint.color.set(color);
-  materials.plastic.color.set('#111111');
-  materials['Material.001'].color.set('#ffff00 ');
+  materials.plastic.color.set("#111111");
+  materials["Material.001"].color.set("#ffff00 ");
 
   return (
     <group {...props} dispose={null}>
-      <group position={[-0.015, -0.009, 0.063]} rotation={[-Math.PI / 2, 0, 0]} scale={0.578}>
+      <group
+        position={[-0.015, -0.009, 0.063]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={0.578}
+      >
         <group position={[0, -0.003, 0.007]}>
           <mesh
             castShadow
@@ -58,7 +62,7 @@ function Model(props) {
             castShadow
             receiveShadow
             geometry={nodes.Cylinder000_3.geometry}
-            material={materials['Material.001']}
+            material={materials["Material.001"]}
           />
         </group>
         <group position={[0, 0, 0.029]}>
@@ -84,7 +88,7 @@ function Model(props) {
             castShadow
             receiveShadow
             geometry={nodes.Cylinder001_3.geometry}
-            material={materials['Material.001']}
+            material={materials["Material.001"]}
           />
         </group>
         <mesh
@@ -145,8 +149,8 @@ function Model(props) {
           receiveShadow
           geometry={nodes.Plane_0.geometry}
           material={materials.hide}
-          position={[-1.65, -0.050, -1.052]}
-          scale={[.58 , 1.685, 1.296]}
+          position={[-1.65, -0.05, -1.052]}
+          scale={[0.58, 1.685, 1.296]}
         />
         <mesh
           castShadow
@@ -332,12 +336,9 @@ function Model(props) {
         />
       </group>
     </group>
-  )
+  );
 }
 
 export default Model;
 
-useGLTF.preload('/models/911.glb')
-
-
-
+useGLTF.preload("/models/911.glb");
