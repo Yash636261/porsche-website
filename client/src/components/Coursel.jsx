@@ -43,7 +43,7 @@ const Coursel = () => {
 
           <button
             onClick={goToNextSlide}
-            className="px-5 py-3.5 z-10 text-white opacity-80 max-md:text-sm max-md:px-2 max-md:py-1 shadow-2xl rounded-full bg-gray-100 text-2xl transition duration-200 hover:bg-black hover:text-white absolute max-sm:right-5 my-auto  disabled:opacity-0"
+            className="px-5 py-3.5 z-10 text-white opacity-80 max-md:text-sm max-md:px-2 max-md:py-1 shadow-2xl rounded-full bg-gray-100 text-2xl transition duration-200 hover:bg-black hover:text-white absolute max-sm:right-5 right-0 my-auto  disabled:opacity-0"
             disabled={current === totalSlides - 1}
           >
             &gt;
