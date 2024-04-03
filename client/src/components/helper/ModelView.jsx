@@ -55,7 +55,7 @@ const ModelView = ({
               <Loader />
           }>
           {isWide && <GT3 scale={[0.9, 0.9, 0.9]} color="#0000ff" />}
-          {!isWide && <GT3 scale={[0.5, 0.5, 0.5]} color="#0000ff" />}
+          {!isWide && <GT3 scale={[0.9, 0.9, 0.9]} color="#0000ff" />}
         </Suspense>
       </group>
     </View>

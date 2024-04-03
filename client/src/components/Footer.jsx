@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="lg:flex">
           
           <div className="w-full lg:w-1/4 mt-6 lg:mt-0">
-            <h3 className="text-2xl font-bold mb-4">Select Your Country/region:</h3>
-            <form className="mt-2 flex">
+            <h3 className="text-white lg:text-2xl md:text-xl text-lg font-normal mb-4">Select Your Country/region:</h3>
+            <form className="mt-2 flex max-md:flex-col ">
               <input
                 type="email"
                 className="p-2 placeholder-gray-50 bg-gray-600 hover:placeholder-white hover:bg-gray-700"
@@ -16,7 +16,7 @@ const Footer = () => {
               />
               <input
                 type="email"
-                className="p-2 placeholder-gray-50 bg-gray-600 ml-2 hover:placeholder-white hover:bg-gray-700"
+                className="p-2 placeholder-gray-50 bg-gray-600 md:ml-2 max-md:mt-2 hover:placeholder-white hover:bg-gray-700"
                 placeholder="country"
               />
             </form>

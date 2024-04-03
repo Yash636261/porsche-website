@@ -17,8 +17,6 @@ function Model(props) {
   materials.paint.color.set(color);
   materials.plastic.color.set('#111111');
   materials['Material.001'].color.set('#ffff00 ');
-  // materials.hide.color.set('#9e5453');
-  // materials.t.color.set('#9e5453');
 
   return (
     <group {...props} dispose={null}>

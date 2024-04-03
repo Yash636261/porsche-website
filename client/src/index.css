@@ -60,7 +60,7 @@ canvas {
   }
 
   .common-padding {
-    @apply sm:py-32 py-20 sm:px-10 px-5
+    @apply sm:py-32 py-10 sm:px-10 px-5
   }
 
   .section-heading {

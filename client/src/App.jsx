@@ -4,6 +4,7 @@ import Highlights from "./components/Highlights"
 import Model from "./components/Model"
 import ModelsChooser from "./components/ModelsChooser"
 import Navbar from "./components/Navbar"
+import UsedCars from "./components/UsedCars"
 
 const App =()=> {
 
@@ -14,6 +15,7 @@ const App =()=> {
       <Highlights />
       <ModelsChooser />
       <Model />
+      <UsedCars />
       <Footer />
     </main>
   )

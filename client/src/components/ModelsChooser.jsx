@@ -3,7 +3,7 @@ import gsap from "gsap";
 import model from "../assets/images/Heroimg.png";
 import taycan from "../assets/images/taycanbg.png";
 import panamera from "../assets/images/panamerabg.png";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,15 +16,37 @@ const ModelsChooser = () => {
     gsap.set("#heading", { opacity: 0, y: -20 }); // Reset heading styles
     gsap.set("#text", { opacity: 0, x: -20 }); // Reset text styles
     gsap.set("#image", { opacity: 0, x: -10 }); // Reset image styles
-
-    gsap.to("#heading", { opacity: 1, y: 0, delay: 0, ease: "power1.inOut" });
-    gsap.to("#image", { opacity: 1, x:0, delay: 0.5 , ease: "power1.inOut" });
+  
+    gsap.to("#heading", {
+      opacity: 1,
+      y: 0,
+      delay: 0,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: "#heading",
+        start: "top 80%",
+      },
+    });
+    gsap.to("#image", {
+      opacity: 1,
+      x: 0,
+      delay: 0.3,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: "#image",
+        start: "top 80%",
+      },
+    });
     gsap.to("#text", {
       opacity: 1,
       x: 0,
-      delay: 0.5,
+      delay: 0.3,
       ease: "power1.inOut",
       stagger: 0.1,
+      scrollTrigger: {
+        trigger: "#text",
+        start: "top 80%",
+      },
     });
   };
 
@@ -37,7 +59,7 @@ const ModelsChooser = () => {
       id="ModelsChooser"
       className="w-screen overflow-hidden common-padding bg-white text-black lg:px-28"
     >
-              {/* <h1 id="heading" className="section-heading pb-5">
+      {/* <h1 id="heading" className="section-heading pb-5">
                 CONFIGURATOR
               </h1> */}
       <div className="flex max-md:flex-col-reverse justify-between items-center py-10">

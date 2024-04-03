@@ -5,7 +5,7 @@ import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import img from "../assets/images/image.png";
+import img from "../assets/images/model.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +23,7 @@ const Model = () => {
     // Trigger animation when element comes into view
     ScrollTrigger.create({
       trigger: "#titl",
-      start: "top 50%", // Start animation when the top of the trigger element is 80% in view
+      start: "top 80%", // Start animation when the top of the trigger element is 80% in view
       onEnter: () => animation.play(), // Play the animation when triggered
       once: true, // Only trigger animation once
     });
@@ -47,10 +47,10 @@ const Model = () => {
         </h1>
 
         <div className="flex flex-col items-center mt-5">
-          <div className="w-full flex justify-center items-center h-[75vh] md:h-[90vh] oveflow-hidden relative">
+          <div className="w-full flex justify-center items-center h-[35vh] md:h-[90vh] oveflow-hidden relative">
             {!isActive && (
               <button
-                className=" px-5 py-7  shadow-2xl rounded-full bg-red-700 text-2xl transition duration-200 my-5 hover:bg-black border border-transparent hover:border hover:text-white hover:border-blue absolute right-1/2 top-1/2 "
+                className=" px-5 py-7 max-md:text-sm max-md:px-2 max-md:py-3 shadow-2xl rounded-full bg-red-700 text-2xl transition duration-200 hover:bg-black border border-transparent hover:border hover:text-white hover:border-blue absolute mx-auto my-auto "
                 onClick={handlebutton}
               >
                 360°
@@ -81,7 +81,7 @@ const Model = () => {
                 </Canvas>
               </>
             ) : (
-                <img src={img} alt="" className=" object-cover overflow-hidden my-auto" />
+                <img src={img} alt="model-image" className=" object-cover overflow-hidden my-auto" />
               
             )}
           </div>
