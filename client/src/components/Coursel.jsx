@@ -33,21 +33,48 @@ const Coursel = () => {
     <>
       <div className="pt-10">
         <div className="flex items-center text-white relative">
-          <button
+          {/* <button
             onClick={goToPrevSlide}
             className="px-5 py-3 z-10 text-white opacity-80 max-md:text-sm max-md:px-2 max-md:py-1 shadow-2xl rounded-full bg-gray-100 text-2xl transition duration-200 hover:bg-black hover:text-white absolute left-5 my-auto  disabled:opacity-0"
             disabled={current === 0}
           >
             &lt;
+          </button> */}
+          <button
+            type="button"
+            onClick={goToPrevSlide}
+            disabled={current === 0}
+            className=" transition duration-200 absolute border-none z-20 flex items-center  hover:scale-105 justify-center overflow-hidden bg-transparent m-0 p-0 w-20 h-20 max-sm:w-10 max-sm:h-10  rounded-none cursor-pointer opacity-100 left-5 disabled:opacity-0"
+            aria-label="Previous"
+          >
+            <img
+              className="w-20 h-20 max-sm:w-10 max-sm:h-10 "
+              src="https://framerusercontent.com/images/GSdWyBEPhJNJ7NnAdmfY5ySo.svg"
+              alt="Previous"
+            />
           </button>
 
           <button
+            type="button"
+            onClick={goToNextSlide}
+            disabled={current === totalSlides - 1}
+            className="transition duration-200 absolute border-none z-20 flex items-center  hover:scale-105 justify-center overflow-hidden bg-transparent m-0 p-0 w-20 h-20 max-sm:w-10 max-sm:h-10 rounded-none cursor-pointer opacity-100 max-sm:right-5 right-0 disabled:opacity-0"
+            
+          >
+            <img
+              className="w-20 h-20 max-sm:w-10 max-sm:h-10 rotate-180"
+              src="https://framerusercontent.com/images/GSdWyBEPhJNJ7NnAdmfY5ySo.svg"
+              alt="Previous"
+            />
+          </button>
+
+          {/* <button
             onClick={goToNextSlide}
             className="px-5 py-3.5 z-10 text-white opacity-80 max-md:text-sm max-md:px-2 max-md:py-1 shadow-2xl rounded-full bg-gray-100 text-2xl transition duration-200 hover:bg-black hover:text-white absolute max-sm:right-5 right-0 my-auto  disabled:opacity-0"
             disabled={current === totalSlides - 1}
           >
             &gt;
-          </button>
+          </button> */}
           {Highlightslides.map((slide, index) => (
             <div
               key={index} // Add key prop to descendant elements

@@ -76,11 +76,22 @@ const ModelsChooser = () => {
                 {models.toUpperCase()}
               </p>
             </div>
-            <button
+            {/* <button
               id="text"
               className="text-cneter max-md:mx-5 border border-gray-200 hover:border-black transition duration-400 h-min py-3 px-5 my-5 flex justify-center items-center rounded-full translate-x-20 opacity-0 font-bold text-2xl"
             >
               &gt;
+            </button> */}
+            <button
+            id="text"
+              type="button"
+              className="transition duration-200 border-none z-20 flex items-center  hover:scale-105 justify-center overflow-hidden bg-transparent m-0 p-0 w-20 h-20 max-sm:w-10 max-sm:h-10 rounded-none cursor-pointer opacity-0 disabled:opacity-0"
+            >
+              <img
+                className="w-20 h-20 max-sm:w-10 max-sm:h-10 rotate-180"
+                src="https://framerusercontent.com/images/GSdWyBEPhJNJ7NnAdmfY5ySo.svg"
+                alt="Previous"
+              />
             </button>
           </div>
           <div className="flex gap-2 capitalize py-4">
